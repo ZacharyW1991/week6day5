@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit{% endblock %}
+
+{% block header %}
+<h1>Please enter all fields.</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class=" col">
+    <form action="" method="post">
+    {{form.csrf_token}}    
+    {{form.first_name.label}}
+    {{form.first_name(class='form-control', placeholder='First Name')}}
+
+    {{form.last_name.label}}
+    {{form.last_name(class='form-control', placeholder='Last Name')}}
+
+    {{form.phone.label}}
+    {{form.phone(class='form-control', placeholder='Phone Number')}}
+
+    {{form.address.label}}
+    {{form.address(class='form-control', placeholder='Address')}}
+
+    {{form.submit.label}}
+    {{form.submit}}
+</form>
+</div>
+{% endblock %}
